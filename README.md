@@ -22,7 +22,7 @@
 - [онлайн bash](https://copy.sh/v86/?profile=linux26)
 - [развернутые виртуалки](https://www.osboxes.org/virtualbox-images)
 - [CTF](https://overthewire.org/wargames/)
-- [тгк компетенции Информационная безопасность]([https://overthewire.org/wargames/](https://t.me/cybersec_atom))
+- [тгк компетенции "Информационная безопасность"](https://t.me/cybersec_atom)
 
 ## Contributors
 
