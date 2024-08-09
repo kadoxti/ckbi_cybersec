@@ -8,7 +8,7 @@
 | -------- | ----- |
 | [PocketFreddie](https://github.com/PocketFreddie) | 10,5 |
 | [Prymak-D-A](https://github.com/Prymak-D-A) | 9 |
-| [zhugina](https://github.com/zhugina) | 6 |
+| [zhugina](https://github.com/zhugina) | 8 |
 | [valueromel](https://github.com/valueromel) | 6 |
 | [BYAKISHMAN](https://github.com/byakishman) | 4 |
 
