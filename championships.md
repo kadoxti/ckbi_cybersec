@@ -6,11 +6,11 @@
 
 | Участник | Баллы |
 | -------- | ----- |
-| [PocketFreddie](https://github.com/PocketFreddie) | 10,5 |
-| [Prymak-D-A](https://github.com/Prymak-D-A) | 9 |
-| [zhugina](https://github.com/zhugina) | 8 |
-| [valueromel](https://github.com/valueromel) | 6 |
-| [BYAKISHMAN](https://github.com/byakishman) | 4 |
+| [PocketFreddie](https://github.com/PocketFreddie) | 11,5 |
+| [Prymak-D-A](https://github.com/Prymak-D-A) | 10 |
+| [zhugina](https://github.com/zhugina) | 9 |
+| [valueromel](https://github.com/valueromel) | 8 |
+| [BYAKISHMAN](https://github.com/byakishman) | 5 |
 
 ### Правила начисления баллов
 
