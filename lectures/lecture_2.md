@@ -20,6 +20,27 @@
 
 Вывод `ls -l`:
 
+- Тип файла:
+  - `-` - Regular file.
+  - `b` - Block special file.
+  - `c` - Character special file.
+  - `d` - Directory.
+  - `l` - Symbolic link.
+  - `n` - Network file.
+  - `p` - FIFO.
+  - `s` - Socket.
+- Разрешения - как в chmod
+- Количество жестких ссылок (символические не считаются)
+- Владелец файла
+- Группа файла
+- Размер
+- Дата и время изменения файла
+- Имя файла
+
+Пример вывода `ls -l`:
+`-rw-r--r-- 5 root root 337 Oct  4 11:31 /etc/hosts` - hosts - обычный файл, с правами `rw-r--r--`, 5 жестких ссылок, владелец root, группа root, размером 337 байт, последнее изменение 4 октября в 11:31.
+
+
 ## Утилита mkdir
 
 `mkdir` - создает папки.  
@@ -98,5 +119,6 @@
 
 ## Источники
 
+- https://linuxize.com/post/how-to-list-files-in-linux-using-the-ls-command/
 - https://losst.pro/komanda-cp-v-linux
 - https://www.geeksforgeeks.org/cp-command-linux-examples/
