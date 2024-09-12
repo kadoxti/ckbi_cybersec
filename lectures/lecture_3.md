@@ -49,7 +49,7 @@ r-- = 100 = 4
 
 Similar to deletion, the sticky bit prevents a user from overwriting a file they don’t own, even if they have write access. This is especially useful in shared directories.
 
-Бит `t` заменяет собой бит `x` в группе прав для остальных пользователей в выводе `ls -l`. Такой вот косяк.
+Бит `t` заменяет собой бит `x` в группе прав для остальных пользователей в выводе `ls -l`. Такой вот косяк. Finally, if our current user does not have the ability to execute a binary that has special permissions, they will be represented in their respective set with a capital ‘S’ (SUID / SGID) or capital ‘T’ (Sticky).
 
 Чтобы однозначно определить наличие одновременно и прав на выполнение и stickybit:
 `stat --format="%a" file` - выведет 3 цифры, если специальных прав нет. Если есть специальные права, то получим 4 цифры и первая из них отвечает за специальные права (комбинация соотв сумма):
