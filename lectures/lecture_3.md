@@ -49,7 +49,9 @@ r-- = 100 = 4
 
 Similar to deletion, the sticky bit prevents a user from overwriting a file they don’t own, even if they have write access. This is especially useful in shared directories.
 
-Бит `t` заменяет собой бит `x` в группе прав для остальных пользователей в выводе `ls -l`. Такой вот косяк. Finally, if our current user does not have the ability to execute a binary that has special permissions, they will be represented in their respective set with a capital ‘S’ (SUID / SGID) or capital ‘T’ (Sticky).
+Бит `t` заменяет собой бит `x` в группе прав для остальных пользователей в выводе `ls -l`. Такой вот косяк. 
+
+> Finally, if our current user does not have the ability to execute a binary that has special permissions, they will be represented in their respective set with a capital ‘S’ (SUID / SGID) or capital ‘T’ (Sticky).
 
 Чтобы однозначно определить наличие одновременно и прав на выполнение и stickybit:
 `stat --format="%a" file` - выведет 3 цифры, если специальных прав нет. Если есть специальные права, то получим 4 цифры и первая из них отвечает за специальные права (комбинация соотв сумма):
@@ -62,6 +64,8 @@ Similar to deletion, the sticky bit prevents a user from overwriting a file they
 Бит смены владельца или **SUID (Set User ID)** — это разрешение файловой системы Linux, которое позволяет запустить исполняемый файл от имени его владельца. Он нужен, потому что многие действия в Linux (например, открытие «сырого» сетевого сокета) требуют прав суперпользователя. Хорошо знакомая всем команда ping использует сетевые сокеты и поэтому должна быть запущена от root’а. Каким образом можно позволить обычному пользователю применять команду ping? Можно выдать пользователю sudo на необходимые команды. Но представьте, что на условной Linux-машине имеется 100 пользователей и насчитывается около 20 привилегированных команд. А как потом управлять разрешениями sudo на все это «богатство»? Не самое элегантное решение, не правда ли? С другой стороны, бит смены владельца значительно упрощает процесс. Бит смены владельца сообщит системе, что все 100 пользователей системы запускают команду ping от имени root. Еще пример утилита `passwd`, которая изменяет файлы /etc/passwd и /etc/shadow, доступные только root'у.
 
 У "другого" пользователя может вообще не быть прав на исполнение, но если задан SUID, то достаточно, чтобы пользователю был виден файл, чтобы его запустить с правами владельца.
+
+> Linux does NOT treat the SUID-bit on shell scripts the same way it does binaries. Only binaries with the SUID bit set run as the file owner.
 
 ## Другое
 
