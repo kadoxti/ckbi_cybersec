@@ -309,7 +309,8 @@ https://habr.com/ru/articles/819263/
 `/etc/login.defs` - настройки по умолчанию, которые исполшьзуются данными утилитами
 `/etc/default/useradd` - настройки по умолчанию, которые исполшьзуются данными утилитами
 `/etc/skel` - отсюда по умолчанию все копируется в домашнюю папку юзера
-Астра поддерживает также: `adduser`, `addgroup`, `deluser`, `delgroup`. Настройки по умолчанию находятся в `/etc/adduser.conf`, `/etc/deluser.conf`.
+
+Астра поддерживает также: `adduser`, `addgroup`, `deluser`, `delgroup`. Настройки по умолчанию находятся в `/etc/adduser.conf`, `/etc/deluser.conf`. Это по сути perl-скрипты над useradd,...
 
 Другие утилиты
 - `chsh -s интерпретатор`
