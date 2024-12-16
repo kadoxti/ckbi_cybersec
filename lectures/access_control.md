@@ -70,6 +70,50 @@ Similar to deletion, the sticky bit prevents a user from overwriting a file they
 
 > Linux does NOT treat the SUID-bit on shell scripts the same way it does binaries. Only binaries with the SUID bit set run as the file owner.
 
+## ACL
+
+Как работает приоритет:
+
+1. Система сначала проверяет ACL: Когда пользователь пытается получить доступ к файлу или каталогу, система сначала проверяет наличие ACL.
+2. Применение ACL: Если определен ACL, система оценивает эти правила. Если найдено соответствующее правило (конкретному пользователю или группе предоставлено определенное разрешение), решение о доступе основывается на ACL.
+3. Применение сhmod: Если нет подходящей записи ACL, которая либо разрешает, либо запрещает доступ, тогда система обращается к стандартным разрешениям chmod (владелец, группа, остальные), чтобы определить доступ.
+
+Изменения через chmod после создания acl не обязательно изменяют данные в acl, это два разных механизма управления доступом.
+
+```bash
+touch file
+chmod 755 file
+getfacl file`
+```
+
+```bash
+# file: file
+# owner: user1
+# group: user1
+user::rwx
+group::r-x
+mask::rwx
+other::r-x
+```
+
+`sudo setfacl -m u:user2:rw file` Здесь мы даем конкретному пользователю “user2” разрешение на чтение и запись файла.
+
+`sudo setfacl -m g:group2:rx file` Здесь мы даем конкретной группе “group2” разрешение на чтение и выполнение файла.
+
+`sudo setfacl -m m::r-- file` - установка маски. Все права, кроме прав владельца, будут проходить операцию И с указанной маской.
+
+```bash
+# file: file
+# owner: user1
+# group: user1
+user::rwx
+user:user2:rw-             #effective:r--
+group::r-x                 #effective:r--
+group:group2:r-x           #effective:r--
+mask::r--
+other::r-x                 #effective:r--
+```
+
 ## Другое
 
 `find / -user linda` - вывод всех файлов, для которых linda владелец
