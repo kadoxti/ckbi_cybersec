@@ -1,6 +1,23 @@
-ffuf - аналог dirbuster. Позволяет перебрать все доступные пути в url.
+# FFUF
 
-`ffuf -w ./wordlist.txt -u http://site.ru/FUZZ -fc 404` - использует словарь wordlist.txt, FUZZ - стандартный placeholder для фаззинга, в него будут записываться слова, fc 404 - исключить из выдачи страницы с кодом 404.
+ffuf - аналог dirbuster. Фаззер.
 
-Словари:
+## Определение типа страниц веб-сервера
+
+`ffuf -w ./web-extensions.txt -u http://site.ru/indexFUZZ`
+
+## Фаззинг страниц
+
+`ffuf -w ./directory-list-2.3-big.txt -u http://site.ru/FUZZ` - использует словарь wordlist.txt, FUZZ - стандартный placeholder для фаззинга, в него будут записываться слова
+
+## Фаззинг по POST
+
+`ffuf -w ./wordlist.txt -u http://site.ru/ -d "login=FUZZ&password=qwerty"`
+
+
+## Словари
+
 https://github.com/danielmiessler/SecLists
+
+
+https://habr.com/ru/companies/skillfactory/articles/810293/
