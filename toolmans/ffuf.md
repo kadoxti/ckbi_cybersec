@@ -13,7 +13,17 @@ ffuf - аналог dirbuster. Фаззер.
 ## Фаззинг по POST
 
 `ffuf -w ./wordlist.txt -u http://site.ru/ -d "login=FUZZ&password=qwerty"`
+`ffuf -w [wordlist path] -X POST -d "username=admin&password=FUZZ" -u [target ip]`
 
+## Фаззинг json
+
+`ffuf -w [wodlist path] -X "PUT" -u [target ip] -H "Content-Type: application/json" -d "{'FUZZ':'test'}"`
+
+## Другие опции
+
+`-recursion`
+
+`ffuf -u [target ip]/FUZZ -w [wordlist path] -e .php` - добавляет в пути .php
 
 ## Словари
 
