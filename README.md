@@ -32,6 +32,7 @@
 - [Полное руководство по bash](https://tldp.org/LDP/abs/html/)
 - [Интерактивный тренажер по SQL](https://stepik.org/course/63054/promo)
 - [Инструмент для CTF crypto](https://gchq.github.io/CyberChef/)
+- [Инструменты для стеганографии](https://github.com/cyberteach360/Steganography)
 
 ## Contributors
 
