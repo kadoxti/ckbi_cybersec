@@ -1,1 +1,2 @@
+## dhcp сервер
 dnsmasq --interface=enp0s3 --dhcp-range=192.168.100.10,192.168.100.254
