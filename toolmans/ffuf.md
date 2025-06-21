@@ -29,5 +29,9 @@ ffuf - аналог dirbuster. Фаззер.
 
 https://github.com/danielmiessler/SecLists
 
+[Intruder/detect/Generic_SQLI.txt](https://github.com/payloadbox/sql-injection-payload-list/blob/6e55457963a04377b904a93a6a65bb49dfe7bccb/Intruder/detect/Generic_SQLI.txt)
+
+https://github.com/josuamarcelc/common-password-list
+https://raw.githubusercontent.com/v0re/dirb/master/wordlists/common.txt
 
 https://habr.com/ru/companies/skillfactory/articles/810293/
