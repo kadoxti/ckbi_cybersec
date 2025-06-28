@@ -34,6 +34,7 @@
 - [Инструмент для CTF crypto](https://gchq.github.io/CyberChef/)
 - [Инструменты для стеганографии](https://github.com/cyberteach360/Steganography)
 - [A list of useful payloads and bypasses for Web Application Security](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- [DFIR RAM](https://github.com/digitalisx/awesome-memory-forensics)
 
 ## Contributors
 
